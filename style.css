@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* root */
+:root{
+    --birulangit:#4abff8;
+    --kuning:#facb1a;
+    --pink:#f47667;
+    --birumuda:#dae9e3;
+    --kuningtelor:#f47409;
+    font-family:'Roboto', sans-serif;
+    font-size: 18px;
+    color: whitesmoke;
+    text-transform: capitalize;
+    text-align: center;
+}
+* {box-sizing:border-box}
+/* set font header */
+h1{
+  font-size: 15rem;
+}
+h2{
+  color: #000000;
+  font-size: 3rem;
+}
+p{
+  font-size: 1rem;
+  color: black;
+}
+/* container size */
+.container{
+    background: white;
+    width:100%;
+}
+.flex{
+    display: flex;
+    flex-flow: column nowrap;
+}
+.flex-container-row{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 350px;
+
+}
+
+
+#image-header{
+  width: 100%;
+  height: auto;
+}
+/* boxing */
+.flex-size-content{
+  position: relative;
+  width: 50%;
+  height: 450px;
+}
+button{
+  max-width: 100%;
+  height: 2em;
+  background: linear-gradient(to right bottom,white,violet);
+  position: relative;
+  inset: auto auto auto 3px;
+  border-radius: 25px;
+  border: none;
+} 
+button:hover{
+  background: black;
+  color: white;
+}
+button{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.profil{
+    background:rgb(240, 155, 141,1) ;
+}
+.raport{
+    background: rgba(148, 232, 235,1);
+}
+.dewan-guru{
+    background: linear-gradient(to right top,rgb(217, 214, 67,1),rgba(167, 214, 148,1));
+}
+.layanan{
+    background: whitesmoke;
+}
+.prestasi{
+    background: linear-gradient(to right,rgba(255,255,255,0.9),rgba(92,224,224,1))
+
+}
+.kalender-sekolah{
+    background:linear-gradient(to right,rgba(255,255,255,0.9),rgba(238, 240, 141,1))
+
+}
+.contact{
+    background: white;
+}
+/* background color */
+/* slide */
+
+
+/* Slideshow container */
+.slideshow-container {
+  background: white;
+  max-width: 100%;
+  position: relative;
+  margin-top: 2px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.prev{
+  left: 0;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+/* dot-container */
+.dot-container{
+  background: white;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* slide */
+.contact-container{
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    height: 50px;
+    background: rgba(148, 232, 235,1);
+    margin-top: 2px;
+}
+img{
+  width: 20%;
+  height: auto;
+}
