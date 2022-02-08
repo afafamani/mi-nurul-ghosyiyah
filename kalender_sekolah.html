@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="kalender_sekolah.css">
+    <title>kalender sekolah</title>
+</head>
+<body>
+    <div style="width: 30vw;height: 10vw; background-color: black;text-align: center;justify-content: space-between;">
+        <h1 id="waktu" style="color: white;"></h1>
+
+    </div>
+    <script>
+        timer();
+        function timer(){
+            var currentTime=new Date();
+            var year=currentTime.getUTCFullYear();
+            var month=currentTime.getMonth()+1;
+            let day;
+            var date=currentTime.getUTCDate();
+            var hours=currentTime.getHours();
+            var minutes=currentTime.getMinutes();
+            var sec=currentTime.getSeconds();
+            // nama hari
+            switch(new Date().getDay()){
+                case 1 :
+                    day='monday';
+                    break;
+                case 2:
+                    day='tuesday';
+                    break;
+                case 3:
+                    day='wednesday';
+                    break;
+                case 4:
+                    day='thursday';
+                    break;
+                case 5:
+                    day='friday';
+                    break;
+                case 6:
+                    day='saturday';
+                    break;
+                case 0:
+                    day='sunday';
+                            }
+            if (date<10){
+                date='0'+date
+            }
+            if (month<10){
+                month='0'+month
+            }
+            if (minutes<10){
+                minutes='0'+minutes}
+            if (sec<10){
+                sec='0'+ sec
+            }
+            var timeString=date+'/'+month+'/'+year+' '+day+' '+ hours +':' + minutes +':' +sec +'';
+            if (hours<11){
+                timeString+='PM'
+            }else{
+                timeString+='AM'
+            }
+            document.getElementById('waktu').innerHTML=timeString;
+            setTimeout(timer,1000)
+
+
+        }
+
+    </script>
+    
+</body>
+</html>

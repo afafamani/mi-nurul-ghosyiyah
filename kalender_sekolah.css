@@ -1,0 +1,7 @@
+.month-name{
+    display: block;
+    background: cornflowerblue;
+    font: 12px;
+    text-align: center;
+    text-justify: center;
+}

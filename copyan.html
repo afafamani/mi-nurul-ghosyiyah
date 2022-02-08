@@ -1,0 +1,404 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="copyan-css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Mi nurul ghosyiyah</title>
+</head>
+<body>
+    <div class="container">
+        <div id="time-wrapper" class="flex">
+            
+            <div id="date-time-block">
+                <button class="close-button"><span>&times;</span></button>
+                <h2 id="waktu">
+                    <script>
+                        timer();
+                        function timer(){
+                            var currentTime=new Date();
+                            var year=currentTime.getUTCFullYear();
+                            var month=currentTime.getMonth()+1;
+                            let day;
+                            var date=currentTime.getUTCDate();
+                            var hours=currentTime.getHours();
+                            var minutes=currentTime.getMinutes();
+                            var sec=currentTime.getSeconds();
+                            // nama hari
+                            switch(new Date().getDay()){
+                                case 1 :
+                                    day='Senin';
+                                    break;
+                                case 2:
+                                    day='Selasa';
+                                    break;
+                                case 3:
+                                    day='Rabu';
+                                    break;
+                                case 4:
+                                    day='Kamis';
+                                    break;
+                                case 5:
+                                    day='Jumat';
+                                    break;
+                                case 6:
+                                    day='Sabtu';
+                                    break;
+                                case 0:
+                                    day='Minggu';
+                                            }
+                            if (date<10){
+                                date='0'+date
+                            }
+                            if (month<10){
+                                month='0'+month
+                            }
+                            if (minutes<10){
+                                minutes='0'+minutes}
+                            if (sec<10){
+                                sec='0'+ sec
+                            }
+                            var timeString=day+', '+date+'/'+month+'/'+year+' '+hours +':' + minutes +':' +sec +'';
+                            if (hours<11){
+                                timeString+='PM'
+                            }else{
+                                timeString+='AM'
+                            }
+                            document.getElementById('waktu').innerHTML=timeString;
+                            setTimeout(timer,1000)
+            
+            
+                        }
+            
+                    </script>
+                </h2>
+                <div id="tanggal-merah">
+                    <script>
+                        
+                        // hari minggu
+                        var hari=new Date();
+                        if (hari.getDay=7){
+                            var notifikasi='Libur Hari Minggu'
+
+
+                        }
+                        var keterangan;
+                        switch (hari.getMonth()){
+                            case 2:
+                                switch(hari.getDate()){
+                                    case 1:
+                                        keterangan='tahun baru imlek 2573 kongzili';
+                                        break;
+                                    case (21<x<25):
+                                        keterangan='ujian praktek kelas 6';
+                                        break;
+                                    case(28):
+                                        keterangan='libur isra\' miraj\'';
+                                        break;
+                                    case(5 || 12 || 19 || 26):
+                                        keterangan='ekstrakurikuler/pengembangan diri secara daring';
+                                        break;                         
+                                }
+                            case 3:
+                            switch (hari.getDate()){
+                               case 3:
+                               keterangan='libur hari raya nyepi tahun baru saka 1944';
+                               break;
+                               case (7<x<11):
+                               keterangan='PUH untuk kelas 1 s.d kelas 5 dan pra UAM untuk kelas 6';
+                               break; 
+                               case (5 || 12 || 19 || 26):
+                               keterangan='ekstrakurikuler/pengembangan diri secara daring';
+                               break;
+                            }
+                            case 4:
+                            switch (hari.getDate()){
+                                case (2 || 3 || 4):
+                                keterangan='perkiraan libur awal ramadhan 1443H'
+                                break;
+                                case 15:
+                                keterangan='libur wafat isa al-masih'
+                                break;
+                                case (18<x<21):
+                                keterangan='kegiatan ramadhan';
+                                break;
+                                case 22:
+                                keterangan='buka bersama guru dan murid';
+                                break;
+                                case (9 || 16 || 23): 
+                                keterangan='ekstrakurikuler/pengembangan diri secara daring';
+                                case (25<x<30):
+                                keterangan='libur sebelum idul fitri 1443H'
+                                break;
+                                
+                            }
+                            case 5:
+                            switch(hari.getDate()){
+                                case 1:
+                                keterangan= "libur hari buruh internasional";
+                                break; 
+                                case (2<x<3): 
+                                keterangan= "Libur Hari Raya Idul fitri" ;
+                                break;
+                                case (4<x<7):
+                                keterangan= "Libur Sesudah Idul Fitri";
+                                break;
+                                case 16: 
+                                keterangan= "Libur Hari Raya Waisak";
+                                break;
+                                case (17<x<21): 
+                                keterangan= "Perkiraan Penilain Akhir/US SD/MI";
+                                break;
+                                case 26:
+                                keterangan= "Libur Kenaikan Al-MAsih";
+                                break;
+                                case(14<x<28):
+                                keterangan='ekstrakurikuler/pengembangan diri secara daring';
+                                break;
+
+
+
+                            }
+                            case 6:
+                            switch(hari.getDate()){
+                                case 1:
+                                keterangan='libur hari lahir pancasila';
+                                break;
+                                case (2<x<8): 
+                                keterangan='penilaian akhir tahun (PAT)';
+                                break;
+                                case (9<x<16): 
+                                keterangan='kegiatan akhir semester';
+                                break;
+                                case 14: 
+                                keterangan='pengumuman kelulusan SD/MI'
+                                break;
+                                case 17:
+                                keterangan='titimangsa dan pembagian buku laporan hasil belajar';
+                                break;
+                                case(18 || 19):
+                                keterangan='rapat kerja pembahasan program tahun pelajaran 22/23';
+                                break;
+                                case (18<x<31): 
+                                keterangan='libur semester ganjil tahun pelajaran 2021/2022';
+                                break;
+                            }
+                        }
+                        document.getElementById('tanggal-merah').innerHTML=notifikasi
+                        
+                    </script>
+                    
+                </div>
+            </div>
+        </div>
+      
+            <section class="header">
+                <img src="./1637797866010.png" alt="" id="image-header">
+                <div class="container-school-name">
+                    <h2 class="school-name">Mi Nurul ghosyiyah</h2>              
+                </div>
+            </section>
+            <section class="flex-container-row">
+                <div class="flex-size-content profil">
+                    <div class="caption">
+                        <h2>profil</h2>
+                    </div>
+                    <div class="footer-flex">
+                        <a href="./profil.html" target="_blank"><button>Learn more</button></a>
+                    </div>
+                </div>
+                <div class="flex-size-content raport">
+                    <div class="caption">
+                        <h2>raport</h2>
+                    </div>
+                    <div class="footer-flex">
+                        <a href="http://rdm.minurulghosyiyah.sch.id/auth#!/dashboard" target="_blank"><button>Learn more </button></a>
+                    </div>
+                </div>
+            
+                <div class="flex-size-content dewan-guru">
+                    <div class="caption">
+                        <h2>dewan guru</h2>
+                    </div>
+                    <div class="footer-flex">
+                        <a href="./dewan guru.html" target="_blank"><button>Learn more </button></a>
+                    </div>
+                </div>
+                <div class="flex-size-content layanan">
+                    <div class="caption">
+                        <h2>layanan</h2>
+                    </div>
+                    <div class="footer-flex">
+                        <a href="https://docs.google.com/forms/d/16a8IGiBo-237T4wcaNk48Vixuq8Cqo-XHROnw235XdQ/viewform?edit_requested=true" target="_blank"><button>Learn more </button></a>
+                    </div>
+                </div>
+            
+            
+                <div class="flex-size-content prestasi">
+                    <div class="caption">
+                        <h2>prestasi</h2>
+                    </div>
+                    <div class="footer-flex">
+                        <a href="./prestasi.html" target="_blank"><button>Learn more</button></a>
+                    </div>
+                    
+                </div>
+                <div class="flex-size-content kalender-sekolah">
+                    <div class="caption">
+                        <h2>kalender sekolah</h2>
+                    </div>
+                    <div class="footer-flex">
+                        <a href="#image-of-calendar" target="_blank"><button>Learn more </button></a>
+                    </div>
+                </div>
+            
+            </section>
+            
+            <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="./foto-slideshow/IMG20211029110729.jpg">
+                <!-- caption text -->
+                <div class="text">Caption Text</div>
+            </div>
+        
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="./foto-slideshow/IMG20220104110618.jpg">
+                <!-- caption text -->
+                <div class="text">Caption Two</div>
+            </div>
+        
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="./foto-slideshow/IMG20220113094044.jpg">
+                <div class="text">Caption Three</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="./foto-slideshow/IMG_20210801_134158.jpg">
+                <div class="text">Caption Three</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="./foto-slideshow/IMG_20220119_160252.jpg">
+                <div class="text">Caption Three</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="./foto-slideshow/IMG_20220119_160313.jpg">
+                <div class="text">Caption Three</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="./foto-slideshow/IMG_20220119_160338.jpg">
+                <div class="text">Caption Three</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="./foto-slideshow/IMG_20220119_160426.jpg">
+                <div class="text">Caption Three</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="./foto-slideshow/IMG_20220119_160500.jpg">
+                <div class="text">Caption Three</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="./foto-slideshow/IMG_20220119_160533.jpg">
+                <div class="text">Caption Three</div>
+            </div>
+        
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+                    <br>
+        <!-- The dots/circles -->
+        <div class="dot-container" style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+            <span class="dot" onclick="currentSlide(10)"></span>
+        </div>
+        <script>
+            var slideIndex=1;
+            showSlides(slideIndex);
+
+         // Next/previous controls
+            function plusSlides(n) {
+            showSlides(slideIndex += n);
+            }
+
+                        // Thumbnail image controls
+            function currentSlide(n) {
+            showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+                }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+                }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            }
+        </script>
+        </div>
+        <div class="flex">
+            <span><h2>follow Us</h2></span>
+            <div class="contact-container">
+                <div class="contact">
+                    <a href="https://id-id.facebook.com/minglegosoo" target="_blank"><img src="./facebook-square-brands.svg" alt="" class="med-soc-logo"></a>
+                    <!-- facebook -->
+                </div>
+                <div class="contact">
+                    <a href="https://www.youtube.com/c/MINGOfficial" target="_blank"><img src="./youtube-square-brands.svg" alt="" class="med-soc-logo">
+                    <!-- youtube -->
+                </div>
+                <div class="contact">
+                    <a href="https://www.instagram.com/minurulghosyiyah_/?hl=id" target="_blank"><img src="./instagram-square-brands.svg" alt="" class="med-soc-logo"></a>
+                    <!-- instagram -->
+                </div>
+                <div class="contact">
+                    <a href="http://tiktok.com/@minurulghosyiyah71" target="_blank"><img src="./tiktok-brands.svg" alt="" class="med-soc-logo"></a>
+                    <!-- tiktok -->
+                </div>
+
+            </div>
+            <br>
+            <br>
+            <br>
+            <div>
+                <span><p>JI. Legoso Raya Gg. Cempaka RT 003/07 Nomor 13-A Kelurahan Pisangan Kecamatan Ciputat Timur Kota Tangerang Selatan 15419 Telp. 021-7492080 email: minurulghosyiyah@gmail.com</p></span>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html> 

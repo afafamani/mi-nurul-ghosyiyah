@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@500;600&display=swap');
 
 /* root */
 :root{
@@ -18,10 +19,63 @@
 h1{
   font-size: 15rem;
 }
-p{
-    color: blue;
-    font-size: 200%;
+.container-school-name{
+  background-color: rgba(92,224,224,0.5);
+  width: 100%;
+  height: max-content;
+}
+#date-time-block{
+  width: 90vw;
+  height: 20vw;
+  display: block;
+  position: fixed;
+  inset: 10vw auto auto auto;
+  z-index: 9999;
+  background: rgb(66,200,245);
+  visibility: hidden;
+ 
+}
+#waktu{
+  color: red;
+  background: black;
+  text-shadow: white;
+  font-size: 4vw;
+  text-align: center;
+ 
+}
+button.close-button{
+  position: fixed;
+  float: right;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background: none;
+  font-size: 3rem;
+  z-index: 3000;
+}
+button.close-button:hover{
+  background: none;
+}
+h2.school-name{
+    color: white;
+    position: absolute;
+    font-size: 7vw;
+    font-family: 'Eczar',serif;
+    z-index: 2000;
+    letter-spacing: 0.5vw;
+    top: 50%;
+    left: 6vw;
+    translate: transform(-50%,-50%);
+    text-transform: uppercase;
+    text-shadow: 2px 2px black;
+    
+    
+    
   }
+h2{
+  color: black;
+  font-size: 5vw;
+}
 /* phone */
 /* @media only screen and (min-width=480px){
   h2{
@@ -30,12 +84,12 @@ p{
   }
 } */
 /* tablet */
-@media (max-width=480px){
-  p{
+/* @media (max-width=480px){
+  h2{
     color: black;
     font-size: 300%;
   }
-}
+} */
 /* desktop */
 /* @media only screen and (min-width=480px){
   h2{
@@ -51,7 +105,7 @@ p{
 /* container size */
 .container{
     background: white;
-    width:100%;
+    max-width:100%;
 }
 .flex{
     display: flex;
@@ -61,24 +115,83 @@ p{
     display: flex;
     flex-flow: row wrap;
     width: 100%;
-    height: 350px;
+    justify-content: space-evenly;
+    background: url(./118507813-kids-playground-play-children-nature-outdoor-preschool-kid-playing-garden-fun-activity-entertainment.webp);
 
 }
-
-
-#image-header{
+.header{
+  position: relative;
   width: 100%;
-  height: auto;
+  height: 25rem;
+  background:rgba(0, 128, 0, 0.3);
+  background-image: url(./PicsArt_01-29-10.28.23.png),url(./WhatsApp\ Image\ 2021-11-10\ at\ 07.47.34.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; 
+  text-align: center;
+  
+}
+#image-header{
+  max-width: 100%;
+  position: absolute;
+  z-index: 2000;
+  left: 42%;
+  right: auto;
+  max-height: 10rem;
+  border-radius: 50%;
+}
+h2:nth-child(3){
+  display: inline-block;
+  position: absolute;
+  inset: 20rem 10rem auto auto;
+  text-transform: uppercase;
+  z-index: 2000;
+  font: 25px;
+  
+  
 }
 /* boxing */
 .flex-size-content{
   position: relative;
-  width: 50%;
-  height: 450px;
+  border-radius: 25px;
+  width: 30%;
+  height: 20rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  transition: width 0.5s,height 0.5s;
+}
+@media screen and (max-width:800px) {
+  .flex-size-content{
+    width: 80%;
+    
+
+  }
+  .flex-size-content:hover{
+    width: 85%;
+    height: 22rem;
+  }
+  
+
+  
+}
+.flex-size-content:hover{
+  width: 35%;
+  height: 25rem;
+
+}
+.caption{
+    height: 60%;
+    width: 100%;
+}
+.footer-flex{
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 button{
-  max-width: 100%;
-  height: 2em;
+  width: 10vw;
+  height: 4vw;
   background: linear-gradient(to right bottom,white,violet);
   position: relative;
   inset: auto auto auto 3px;
@@ -88,6 +201,7 @@ button{
 button:hover{
   background: black;
   color: white;
+  cursor: pointer;
 }
 button{
   text-decoration: none;
@@ -124,9 +238,16 @@ button{
 /* Slideshow container */
 .slideshow-container {
   background: white;
-  max-width: 100%;
+  width: 100%;
+  height: 30rem;
   position: relative;
   margin-top: 2px;
+  overflow: hidden;
+}
+img:nth-child(2){
+  width: 100%;
+  max-height: 30rem;
+  object-fit: cover;
 }
 
 /* Hide the images by default */
@@ -228,10 +349,17 @@ button{
     flex-flow: row nowrap;
     width: 100%;
     height: 50px;
-    background: rgba(148, 232, 235,1);
+    background: white;
     margin-top: 2px;
+    justify-content: space-evenly;
 }
-img{
+.med-soc-logo{
   width: 20%;
   height: auto;
 }
+/* things-to-do 
+1.buat background tulisan jadi biru langit
+2.make calendar,pop up image ,having left and right button to scroll every month
+3.profil and dewan guru will use new html with text inside it
+4.
+*/

@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+th,td{
+    border: 2px solid black;
+}
+*{
+    font-family: "roboto",sans-serif;
+    text-transform: capitalize;
+    text-align: center;
+    text-justify: center;
+    background: linear-gradient(to right bottom, whitesmoke,rgba(50, 168, 82, 0.8));
+}
+tr.header>td{
+    text-transform: uppercase;
+    font-weight: bolder;
+    
+}
